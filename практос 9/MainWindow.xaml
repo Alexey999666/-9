@@ -1,0 +1,53 @@
+﻿<Window x:Class="практос_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:практос_9"
+        mc:Ignorable="d"
+        Title="Структуры" Height="650" Width="1000" ResizeMode="CanMinimize">
+    <Grid Background="Yellow">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="400*"/>
+        </Grid.RowDefinitions>
+        <Menu  Grid.Row="0"  Grid.ColumnSpan="2" Margin="0,0,0.333,0" Background="Yellow" Foreground="Blue">
+            <MenuItem Header="Файл"  Background="Yellow" Foreground="Blue">
+                <MenuItem Header="Выйти" Click="btnExit_Click" Background="Yellow" Foreground="Blue"/>
+            </MenuItem>
+            <MenuItem Header="Действия"  Background="Yellow" Foreground="Blue">
+                <MenuItem Header="Отправить посылку" Click="btnSendPackage_Click" Background="Yellow" Foreground="Blue"/>
+                <MenuItem Header="Показать посылки" Click="btnShowPackage_Click" Background="Yellow" Foreground="Blue"/>
+                <MenuItem Header="Посчитать" Click="btnCalculate_Click" Background="Yellow" Foreground="Blue"/>
+                <MenuItem Header="Очистить"  Click="btnClean_Click"  Background="Yellow" Foreground="Blue"/>
+            </MenuItem>
+            <MenuItem Header="Справка" Background="Yellow" Foreground="Blue">
+                <MenuItem Header="О программе" Click="btnInfo_Click" Background="Yellow" Foreground="Blue"/>
+                <MenuItem Header="Разработчик" Click="btnDeveloper_Click" Background="Yellow" Foreground="Blue"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel  Grid.Row="1">
+            <Label Content="Город" HorizontalContentAlignment="Center" Foreground="Blue"/>
+            <TextBox x:Name="tbCity"  TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+            <Label Content="Улица" HorizontalContentAlignment="Center" Foreground="Blue"/>
+            <TextBox x:Name="tbStreet"  TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+            <Label Content="Дом" HorizontalContentAlignment="Center" Foreground="Blue"/>
+            <TextBox x:Name="tbHouse"  TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+            <Label Content="Квартира" HorizontalContentAlignment="Center" Foreground="Blue"/>
+            <TextBox x:Name="tbApartment"  TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+            <Label Content="Кому" HorizontalContentAlignment="Center" Foreground="Blue"/>
+            <TextBox x:Name="tbRecipient"  TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+            <Label Content="Ценость" HorizontalContentAlignment="Center" Foreground="Blue"/>
+            <TextBox x:Name="tbValue"  TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+            <Button Content="Отправить посылку" Click="btnSendPackage_Click" Background="Yellow" Foreground="Blue"/>
+            <Button Content="Показать данные" Click="btnShowPackage_Click" Background="Yellow" Foreground="Blue"/>
+            <TextBox x:Name="tbRezPackage" TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+            <Label Content="Введите искомый город" HorizontalContentAlignment="Center" Foreground="Blue"/>
+            <TextBox x:Name="tbCityCount" TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+            <Button Content="Посчитать" Click="btnCalculate_Click" Background="Yellow" Foreground="Blue"/>
+            <TextBox x:Name="tbRezCount" TextWrapping="Wrap" TextAlignment="Center" Background="GreenYellow" Foreground="Blue"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
